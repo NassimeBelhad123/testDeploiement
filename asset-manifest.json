@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/NassimeBelhad123/testDeploiement/static/css/main.947f9ed5.chunk.css",
+    "main.js": "/NassimeBelhad123/testDeploiement/static/js/main.2f428603.chunk.js",
+    "main.js.map": "/NassimeBelhad123/testDeploiement/static/js/main.2f428603.chunk.js.map",
+    "runtime-main.js": "/NassimeBelhad123/testDeploiement/static/js/runtime-main.d276f01d.js",
+    "runtime-main.js.map": "/NassimeBelhad123/testDeploiement/static/js/runtime-main.d276f01d.js.map",
+    "static/js/2.f3f1a76b.chunk.js": "/NassimeBelhad123/testDeploiement/static/js/2.f3f1a76b.chunk.js",
+    "static/js/2.f3f1a76b.chunk.js.map": "/NassimeBelhad123/testDeploiement/static/js/2.f3f1a76b.chunk.js.map",
+    "index.html": "/NassimeBelhad123/testDeploiement/index.html",
+    "precache-manifest.2223ef3c07391d1fa0fea5538412adac.js": "/NassimeBelhad123/testDeploiement/precache-manifest.2223ef3c07391d1fa0fea5538412adac.js",
+    "service-worker.js": "/NassimeBelhad123/testDeploiement/service-worker.js",
+    "static/css/main.947f9ed5.chunk.css.map": "/NassimeBelhad123/testDeploiement/static/css/main.947f9ed5.chunk.css.map",
+    "static/js/2.f3f1a76b.chunk.js.LICENSE.txt": "/NassimeBelhad123/testDeploiement/static/js/2.f3f1a76b.chunk.js.LICENSE.txt",
+    "static/js/main.2f428603.chunk.js.LICENSE.txt": "/NassimeBelhad123/testDeploiement/static/js/main.2f428603.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d276f01d.js",
+    "static/js/2.f3f1a76b.chunk.js",
+    "static/css/main.947f9ed5.chunk.css",
+    "static/js/main.2f428603.chunk.js"
+  ]
+}
