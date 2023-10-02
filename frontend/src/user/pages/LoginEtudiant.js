@@ -22,7 +22,7 @@ const LoginEtudiant = () => {
 
     try{
       const reponseData = await sendRequest(
-        process.env.REACT_APP_BACKEND_URL+"/etudiants/connexion",
+        process.env.REACT_APP_BACKEND_URL+"etudiants/connexion",
         "POST",
         JSON.stringify({
             courriel: saisieCourrielEtudiant,
