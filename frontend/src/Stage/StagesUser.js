@@ -3,11 +3,10 @@ import { useParams } from "react-router-dom";
 import ListeStagesUser from './components/ListeStagesUser';
 import { useHttpClient } from '../shared/hooks/http-hook';
 import { AuthContext } from '../shared/context/auth-context';
-import Button from "react-bootstrap/esm/Button";
-import { Link } from "react-router-dom"; // Import the Link component
+import { Link } from "react-router-dom"; 
  
 const StagesListeUser = () => {
-    const [StagesLoad, setStagesLoad] = useState([]); // Initialize as an empty array
+    const [StagesLoad, setStagesLoad] = useState([]); 
     const auth = useContext(AuthContext);
     const { error, sendRequest, clearError } = useHttpClient();
  

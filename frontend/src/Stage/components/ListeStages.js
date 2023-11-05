@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
 
-import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom";
 import { AuthContext } from "../../shared/context/auth-context";
 import { useHttpClient } from "../../shared/hooks/http-hook";

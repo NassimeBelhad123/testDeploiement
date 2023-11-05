@@ -58,7 +58,7 @@ const LoginEtudiant = () => {
 
   return (
     <div className="inscription">
-      <h1>Bienvenue - Connexion Étudiant</h1>
+      <h1>Bienvenu - Connexion Étudiant</h1>
       <h4><Link to="/loginEmployeur">Connexion Employeur</Link></h4>
       <form className="nouveau-stage-form" onSubmit={connexionEtudiant}>
       <input
