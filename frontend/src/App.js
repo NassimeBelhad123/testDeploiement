@@ -21,6 +21,7 @@ import StagesUser from "./Stage/StagesUser";
 import Stages from "./Stage/Stages";
 import ModifierEtudiant from "./Etudiant/ModifierEtudiant";
 import ModifierEmployeur from './Employeur/ModifierEmployeur';
+import AffichageCandidats from './Employeur/AffichageCandidats';
 import MainNavigation from './shared/Navigation/MainNavigation';
 import { AuthContext } from './shared/context/auth-context';
 
@@ -83,6 +84,10 @@ const App = () => {
 
         <Route path = "/modifierStage/:userId/:stageId">
           <ModifierStage />
+        </Route>
+
+        <Route path = "/affichageCandidats/:stageId">
+          <AffichageCandidats />
         </Route>
 
         <Redirect to="/modifierProfilEmployeur" />

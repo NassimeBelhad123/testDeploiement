@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../shared/context/auth-context';
 import { Link } from "react-router-dom";
+import './Liste.css';
  
 import StageUserItem from './StageUserItem';
  
@@ -20,7 +21,7 @@ const ListeStagesUser = props => {
         <p>
             <ul className='Liste-Stages'>
                 {props.items.map(stage => (
-                    <div key={stage.id}>
+                    <div className='StageUserItem' key={stage.id}>
                         <StageUserItem
                             id={stage.id}
                             nom={stage.nom}
@@ -30,7 +31,9 @@ const ListeStagesUser = props => {
                             description={stage.description}
                             remuneration={stage.remuneration}
                         />
-                        <Link to={`/modifierStage/${auth.userId}/${stage.id}`}>Modifier ce stage</Link>
+                        <Link  className='Link-Button' to={`/modifierStage/${auth.userId}/${stage.id}`}>Modifier ce stage</Link>
+                        <br/>
+                        <Link className='Link-Button' to={`/affichageCandidats/${stage.id}`}>Afficher les postulations</Link>
                     </div>
                 ))}
             </ul>

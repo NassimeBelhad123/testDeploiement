@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { useHttpClient } from "../shared/hooks/http-hook";
 import { AuthContext } from "../shared/context/auth-context";
+import "./ModifierStageEmployeur.css"
 
 const ModifierStage = () => {
     const auth = useContext(AuthContext);
@@ -28,7 +29,7 @@ const ModifierStage = () => {
             event.preventDefault();
             try{
                 const reponseData = await sendRequest(
-                    process.env.REACT_APP_BACKEND_URL+`stages/modifierStage/${employeurId}/${stageId}`,
+                  process.env.REACT_APP_BACKEND_URL+`stages/modifierStage/${employeurId}/${stageId}`,
                     'PATCH',
                     JSON.stringify({
                       nom: saisieNomEntreprise,

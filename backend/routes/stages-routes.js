@@ -15,5 +15,6 @@ router.patch("/modifierStage/:employeurId/:stageId", controleursStages.updateSta
 
 router.delete("/supprimerStage/:employeurId/:stageId", controleursStages.supprimerStage);
 
+router.get("/recupererStage/:stageId", controleursStages.recupererStage);
 
 module.exports = router;

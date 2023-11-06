@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useContext } from 'react';
 
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../../shared/context/auth-context";
 import { useHttpClient } from "../../shared/hooks/http-hook";
-import profil from "../../Etudiant/ModifierEtudiant"
+import profil from "../../Etudiant/ModifierEtudiant";
 
-import './Liste.css'
+import './Liste.css';
 
 const ListeStages = (props) => {
     const auth = useContext(AuthContext);
-    const {error, sendRequest, clearError } = useHttpClient();
+    const { error, sendRequest, clearError } = useHttpClient();
     const [selectedStage, setSelectedStage] = useState(null);
 
     const handleMouseEnter = (stageId) => {
@@ -21,28 +21,28 @@ const ListeStages = (props) => {
     };
 
     useEffect(() => {
-        if(error){
-          alert(error);
-          clearError();
+        if (error) {
+            alert(error);
+            clearError();
         }
-      }, [error, clearError]);
+    }, [error, clearError]);
 
     async function postulerStage(stageId) {
         try {
+
             const reponseData = await sendRequest(
                 process.env.REACT_APP_BACKEND_URL+`etudiants/inscrireStage/${stageId}/${auth.userId}`,
                 "POST",
                 JSON.stringify({
-
                 }),
                 {
-                  "Content-Type": "application/json",
+                    "Content-Type": "application/json",
                 }
             );
             console.log(reponseData);
-            alert("Votre demande à bien été envoyer!");
-        }catch (err) {
-          console.log(err);
+            alert("Votre demande a bien été envoyée!");
+        } catch (err) {
+            console.log(err);
         }
     }
 

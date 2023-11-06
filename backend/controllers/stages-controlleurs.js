@@ -201,9 +201,33 @@ const supprimerStage = async (requete, reponse, next) => {
   reponse.status(200).json({message: "Stage supprimé avec success!"});
 };
 
+const recupererStage = async (requete, reponse, next) =>{
+  const stageId = requete.params.stageId;
+ 
+  let stage;
+ 
+  try{
+      stage = await Stage.findById(stageId);
+  }catch (err){
+      return next(new HttpErreur("Erreur lors de la récupération du stage", 500));
+  }
+ 
+  if (!stage) {
+    return next(new HttpErreur("Aucun stage trouvée pour l'id fourni", 404));
+  }
+ 
+  reponse.json({ stage: stage.toObject({ getters: true }) });
+}
+
 exports.getToutLesStages = getToutLesStages;
 exports.getStagesEmployeur = getStagesEmployeur;
 exports.ajouterEmployeurStage = ajouterEmployeurStage;
 exports.ajouterStage = ajouterStage;
 exports.updateStage = updateStage;
 exports.supprimerStage= supprimerStage;
+exports.recupererStage = recupererStage;
+xports.ajouterEmployeurStage = ajouterEmployeurStage;
+exports.ajouterStage = ajouterStage;
+exports.updateStage = updateStage;
+exports.supprimerStage= supprimerStage;
+exports.recupererStage = recupererStage;
