@@ -102,7 +102,7 @@ function saisieTelephoneHandler(event) {
 
   return (
     <div className="inscription">
-        <h1>Bienvenue - Inscriptio Étudiant</h1>
+        <h1>Bienvenue - Inscription Étudiant</h1>
         <h4><Link to="/inscrireEmployeur">ou incrivez-vous comme employeur</Link></h4>
     <form onSubmit={ajouterEtudiant}>
       <label for="prenomEtudiant">Prénom Étudiant: </label>
