@@ -1,7 +1,0 @@
-{
-    "env": {
-        "DB_USER": "projetdev",
-        "DB_PASSWORD": "qwert12345",
-        "DB_NAME":"cluster0"
-    }
-}
