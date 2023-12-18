@@ -15,25 +15,27 @@ const StageUserItem = props => {
         }
       }, [error, clearError]);
 
-    async function supprimerStage(stageId) {
-        
+      async function supprimerStage(stageId) {
+        const isConfirmed = window.confirm("Voulez-vous vraiment supprimer ce stage?");
+    
+        if (!isConfirmed) {
+            return; 
+        }
+    
         try {
             const reponseData = await sendRequest(
-                process.env.REACT_APP_BACKEND_URL+`stages/supprimerStage/${auth.userId}/${stageId}`,
+                process.env.REACT_APP_BACKEND_URL + `stages/supprimerStage/${auth.userId}/${stageId}`,
                 "DELETE",
-                JSON.stringify({
-
-                }),
+                JSON.stringify({}),
                 {
-                  "Content-Type": "application/json",
+                    "Content-Type": "application/json",
                 }
             );
             console.log(reponseData);
-            alert("Votre stage à bien été supprimé!");
-        }catch (err) {
-          console.log(err);
+            alert("Votre stage a bien été supprimé!");
+        } catch (err) {
+            console.log(err);
         }
-    
     }
     
 
